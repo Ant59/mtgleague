@@ -1,0 +1,24 @@
+// Reassign color vars to semantic color scheme
+/*$brand-primary:             #6f5499; //#0099cc
+$brand-success:             #2ecc71;
+$brand-info:                #4cc3d9;
+$brand-warning:             #ffc65d;
+$brand-danger:              #d96557;
+$brand-inverse:             #4c5064;*/
+
+// Global Bootstrap options
+$enable-flex:               true;
+$enable-rounded:            false;
+
+// Background
+$body-bg: #F5F5F5;
+
+// Import boostrap defaults
+@import '~bootstrap/scss/variables';
+
+// Font path for Font Awesome SASS
+$fa-font-path: "~font-awesome/fonts";
+
+// Base font family with fallback stack to Bootstrap default
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+$font-family-base: 'Source Sans Pro', $font-family-sans-serif;

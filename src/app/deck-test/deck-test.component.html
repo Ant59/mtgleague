@@ -1,0 +1,30 @@
+<div>
+  <h1>Deck Tester</h1>
+  <div class="form-group">
+    <label for="deck">Deck Input</label>
+    <textarea [formControl]="deckControl" class="form-control" id="deck" rows="3"></textarea>
+  </div>
+  <div>
+    <h2>Blocks</h2>
+    <div *ngFor="let block of (deckBlocks$ | async)">{{block[0]}}: {{block[1]}}</div>
+  </div>
+  <div [ngSwitch]="blockCheck$ | async">
+    Block Format Check:
+    <i *ngSwitchCase="true" class="fa fa-check" aria-hidden="true"></i>
+    <i *ngSwitchCase="false" class="fa fa-times" aria-hidden="true"></i>
+    <div *ngSwitchCase="false">
+      <p>Closest Block: <strong>{{(blockCheckFails$ | async).block}}</strong></p>
+      <p>Cards outside: <span *ngFor="let card of (blockCheckFails$ | async).cards">{{card.name}}</span></p>
+    </div>
+  </div>
+  <div>
+    <h2>Sets</h2>
+    <div *ngFor="let set of (deckSets$ | async)">{{set[0]}}: {{set[1]}}</div>
+  </div>
+  <div>
+    <h2>Latest Printings</h2>
+    <div *ngFor="let card of (deck$ | async); trackBy: id" style="display: inline-block">
+      <img src="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid={{card.multiverseid}}&type=card" [alt]="card.name">
+    </div>
+  </div>
+</div>
