@@ -7,9 +7,24 @@ header {
   padding: 12rem 0 12rem 0;
   h1 {
     color: white;
+    font-size: 4rem;
   }
 }
 
 h2 {
   text-align: center;
+}
+
+.page {
+  padding: 2rem;
+}
+
+footer {
+  background: #444;
+  text-align: center;
+  color: white;
+  padding: 1rem 0;
+  p {
+    margin: 0;
+  }
 }
