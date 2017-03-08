@@ -212,7 +212,7 @@ abundance`;
 
   fetch(list: string): Observable<Card[]> {
     let deck = list.toLowerCase().split('\n').map(
-      name => name.trim()
+      name => name.trim().replace(/^[0-9]+\s+/, '')
     );
 
     return this.cards$.map(
