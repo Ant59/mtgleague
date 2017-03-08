@@ -90,7 +90,7 @@ export class DeckTestComponent {
 
   ngOnInit() {
     // Get all sets from JSON
-    this.sets$ = this.http.get("https://mtgjson.com/json/AllSetsArray-x.json")
+    this.sets$ = this.http.get("/assets/AllSetsArray-x.json")
       .map(response => response.json())
       .publishLast()
       .refCount();
