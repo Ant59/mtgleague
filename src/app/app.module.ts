@@ -18,14 +18,14 @@ import { AppRoutingModule } from "./app-routing.module";
 
 import { AppComponent } from './app.component';
 import { DeckTestComponent } from './deck-test/deck-test.component';
-import { HomeComponent } from './home/home.component';
+import { RulesComponent } from './rules/rules.component';
 import { PointsComponent } from './points/points.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DeckTestComponent,
-    HomeComponent,
+    RulesComponent,
     PointsComponent
   ],
   imports: [
