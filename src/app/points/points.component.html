@@ -1,8 +1,11 @@
-<h2>League Points</h2>
 <div class="container">
+  <h2>League Points</h2>
+  <p>This is an overview of all potential league points cards.</p>
+  <hr>
   <div class="row">
-    <div class="col col-sm-12">
-      <img src="/assets/images/points/{{name}}.jpg" *ngFor="let name of points">
+    <div class="col col-lg-3 col-md-4 col-sm-6 col-12" *ngFor="let name of points">
+      <img src="/assets/images/points/{{name}}.jpg" class="img-fluid mb-2">
+      <p class="text-center">{{name}}</p>
     </div>
   </div>
 </div>
