@@ -13,6 +13,7 @@ import { compose } from '@ngrx/core/compose';
 
 import { storeFreeze } from 'ngrx-store-freeze';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MarkdownModule } from 'angular2-markdown';
 
 import { AppRoutingModule } from "./app-routing.module";
 
@@ -38,6 +39,7 @@ import { PointsComponent } from './points/points.component';
     //StoreModule.provideStore(rootReducer),
     //StoreDevtoolsModule.instrumentOnlyWithExtension(),
     NgbModule.forRoot(),
+    MarkdownModule.forRoot(),
     // Routing
     AppRoutingModule,
     //RouterStoreModule.connectRouter()
